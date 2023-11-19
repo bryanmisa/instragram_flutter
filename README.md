@@ -20,4 +20,5 @@ dependencies {
 5. Install nodejs
 6. run firebase login
 7. dart pub global activate flutterfire_cli
-8. 
+8. flutterfire configure
+9. upgrade gradle version.
