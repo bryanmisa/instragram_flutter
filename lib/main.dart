@@ -6,6 +6,7 @@ import 'package:instragram_flutter/responsive/mobile_screen_layout.dart';
 import 'package:instragram_flutter/responsive/responsive_layout_screen.dart';
 import 'package:instragram_flutter/responsive/web_screen_layout.dart';
 import 'package:instragram_flutter/screens/login_screen.dart';
+import 'package:instragram_flutter/screens/signup_screen.dart';
 import 'package:instragram_flutter/utils/colors.dart';
 
 void main() async {
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
       //   mobileScreenLayout: MobileScreenLayout(),
       //   webScreenLayout: WebScreenLayout(),
       // ),
-      home: const LoginScreen(),
+      home: const SignupScreen(),
     );
   }
 }
