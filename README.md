@@ -22,3 +22,6 @@ dependencies {
 7. dart pub global activate flutterfire_cli
 8. flutterfire configure
 9. upgrade gradle version.
+
+
+Last Time Watched : 45:03
