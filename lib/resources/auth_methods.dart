@@ -80,6 +80,10 @@ class AuthMethods {
       } else {
         res = "Please enter all fields";
       }
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'password') {
+        res = "Password is wrong";
+      }
     } catch (err) {
       res = err.toString();
     }
