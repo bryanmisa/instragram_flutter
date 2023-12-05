@@ -23,9 +23,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -58,23 +64,5 @@ class DefaultFirebaseOptions {
     messagingSenderId: '43655460223',
     projectId: 'instagram-tutorial-95668',
     storageBucket: 'instagram-tutorial-95668.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBsvqgWf4AmdONuP0Y6IGLtpYn4cVCnDAM',
-    appId: '1:43655460223:ios:34331153a8eabb62c4964a',
-    messagingSenderId: '43655460223',
-    projectId: 'instagram-tutorial-95668',
-    storageBucket: 'instagram-tutorial-95668.appspot.com',
-    iosBundleId: 'com.example.instragramFlutter',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBsvqgWf4AmdONuP0Y6IGLtpYn4cVCnDAM',
-    appId: '1:43655460223:ios:354874fa050cefe6c4964a',
-    messagingSenderId: '43655460223',
-    projectId: 'instagram-tutorial-95668',
-    storageBucket: 'instagram-tutorial-95668.appspot.com',
-    iosBundleId: 'com.example.instragramFlutter.RunnerTests',
   );
 }

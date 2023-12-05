@@ -7,7 +7,7 @@
     - firebase_auth 
     - firebase_storage
  2. Save the google-services.json from firebase storage
- 3. Add add the code below on the project/build.gradle on the dependencies
+ 3. Add add the code below on the project/build.gradle on the dependencies  
     dependencies {
         classpath "com.google.gms:google-services:4.4.0"
 
@@ -17,7 +17,9 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:32.6.0')
 }
 
-5. Install nodejs
+5. Install 
+    - nodejs
+    - https://firebase.google.com/docs/cli#install-cli-windows
 6. run firebase login
 7. dart pub global activate flutterfire_cli
 8. flutterfire configure
