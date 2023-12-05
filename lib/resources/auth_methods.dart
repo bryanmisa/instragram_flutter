@@ -1,8 +1,7 @@
 import 'dart:typed_data';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:instragram_flutter/resources/strorage_material.dart';
 
 class AuthMethods {
@@ -55,13 +54,32 @@ class AuthMethods {
         // );
         res = 'Success';
       }
-      
-    //  on FirebaseAuthException catch (err) {
-    //   if (err.code == 'invalid-email') {
-    //     res = 'The email is badly formatted';
-    //   } else if (err.code == 'weak-password') {
-    //     res = "Password should be at least 6 characters";
-    //
+
+      //  on FirebaseAuthException catch (err) {
+      //   if (err.code == 'invalid-email') {
+      //     res = 'The email is badly formatted';
+      //   } else if (err.code == 'weak-password') {
+      //     res = "Password should be at least 6 characters";
+      //
+    } catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
+
+  // ---> Login Function
+
+  Future<String> loginUser(
+      {required String email, required String password}) async {
+    String res = "Some error occured";
+    try {
+      if (email.isNotEmpty || password.isNotEmpty) {
+        await _auth.signInWithEmailAndPassword(
+            email: email, password: password);
+        res = "success";
+      } else {
+        res = "Please enter all fields";
+      }
     } catch (err) {
       res = err.toString();
     }
